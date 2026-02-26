@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pra ana clara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=playfair+display:wght@500&family=poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(135deg,#6e0000,#9b0000,#ff4d6d);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'poppins',sans-serif;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    max-width:650px;
+    padding:40px;
+    background:rgba(0,0,0,0.45);
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
+    animation:fadein 1.5s ease;
+}
+
+h1{
+    font-family:'playfair display',serif;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:1.1rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+button{
+    padding:12px 28px;
+    font-size:0.95rem;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    background:white;
+    color:#9b0000;
+    transition:0.3s ease;
+}
+
+button:hover{
+    transform:scale(1.04);
+}
+
+.surpresa{
+    display:none;
+    margin-top:25px;
+    animation:fadein 1s ease forwards;
+}
+
+.surpresa img{
+    width:220px;
+    border-radius:20px;
+    margin-bottom:12px;
+    animation:flutuar 3s ease-in-out infinite;
+}
+
+.mensagem-final{
+    font-size:1.1rem;
+}
+
+@keyframes fadein{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes flutuar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>ana clara</h1>
+
+    <p>
+        eu fiquei meio sem reação quando você me chamou pra jantar…<br><br>
+        de verdade.<br><br>
+        acho que você não tem noção do quanto isso me surpreendeu.<br>
+        é a primeira vez que alguém faz um convite assim pra mim.<br><br>
+        eu fiquei feliz… só não sou muito bom demonstrando.<br><br>
+        mas eu gostei. gostei mesmo.
+    </p>
+
+    <button onclick="mostrar()">receba sua surpresa</button>
+
+    <div class="surpresa" id="surpresa">
+        <img src="gatinho-com-buque-de-flores_798986-407.avif" alt="gatinho com buquê">
+        <div class="mensagem-final">
+            ele veio te entregar um buquê 🌹<br>
+            porque você é muito fofa.
+        </div>
+    </div>
+</div>
+
+<script>
+function mostrar(){
+    document.getElementById("surpresa").style.display="block";
+}
+</script>
+
+</body>
+</html>
